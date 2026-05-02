@@ -5,11 +5,16 @@ Built an ETL pipeline to clean and analyze transactional retail data.
 
 ## Pipeline Design 
 Exract the CSV data
+
 Transform(Python - pandas):
   Handling missing Customer IDs ( Converted to NULL)
+
   Removed the invalid transactions( negative/zero Quantity adn Price)
+
   Preserved monetary precision( Price as float)
-  Created 'total_price = Quantity * Price' 
+
+  Created 'total_price = Quantity * Price'
+ 
 Load
   Stored cleanded data into SQLite( 'practice.db')
 
