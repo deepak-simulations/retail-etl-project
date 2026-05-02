@@ -20,8 +20,11 @@ Load
 
 ## Analysis(SQL)
  Total revenue calculation
- Top customers by revenue 
+
+ Top customers by revenue
+ 
  Top country by revenue
+
  Missing Customer analysis
 
 ## Key insights
@@ -34,10 +37,14 @@ Load
 
 ## Key learnings
   Difference beween NULL vs empty vlues
+
   Importance of data type decisions ( int vs float)
+  
   ETL vs ELT
+
   Querrty patters determine indexing ( next)
 
 ## Next step 
   Add indexing for query optimization
+
   MOve to scalable data tools ( cloud / distributed systems)
