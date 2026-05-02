@@ -3,7 +3,7 @@
 ## Overview
 Built an ETL pipeline to clean and analyze transactional retail data.
 
-##Pipeline Design 
+## Pipeline Design 
 Exract the CSV data
 Transform(Python - pandas):
   Handling missing Customer IDs ( Converted to NULL)
