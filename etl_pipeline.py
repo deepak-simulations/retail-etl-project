@@ -1,5 +1,6 @@
 import pandas as pd
 import sqlite3
+import matplotlib.pyplot as plt
 
 def extract():
     print("Extracting data..")
@@ -51,7 +52,45 @@ def load(df):
     df.to_sql("clean_retail",conn,if_exists="replace",index=False)
     conn.close()
 
+## visualization of data 
+def plot():
+    
+    top_products = pd.read_csv("top_product.csv")
+    revenue_country = pd.read_csv("revenue_country.csv")
+    monthly_revenue = pd.read_csv("monthly_revenue.csv")    
+
+
+    top_products.plot(
+        x="Description",
+        y = "revenue",
+        kind="barh" 
+    )
+    plt.title("Revenue generation product-wise")
+
+
+    revenue_country = revenue_country.set_index("Country")
+
+    revenue_country.plot(
+        
+        y = "revenue",
+        kind= "pie",
+        autopct='%1.1f%%',
+        legend=False
+    )
+    plt.title("Country-wise revenue share")
+    
+    monthly_revenue.plot(
+        x = "month",
+        y = "total_revenue",
+        kind="line",
+        marker='o'
+    )
+    
+    plt.title("Monthly Revenue Trend")
+    plt.xlabel("Month")
+    plt.ylabel("Revenue(in million)")
+    plt.show()
+
 if __name__=="__main__":
-    df = extract()
-    df = transform(df)
-    load(df)
+    
+    plot()
