@@ -34,6 +34,14 @@ Load
   indicating lower average value per transaction.
  
   Data cleaning significantly imporved consistancy 
+  
+  UK generated dominant share of revenue.
+  
+  Revenue fluctuated significantly month to month.
+  
+  No strong long-term revenue growth observed.
+  
+  Few products contributed disproportionately to revenue. 
 
 ## Key learnings
   Difference beween NULL vs empty vlues
@@ -41,10 +49,11 @@ Load
   Importance of data type decisions ( int vs float)
   
   ETL vs ELT
+  
+  Learned how relational databases connect data across multiple table using JOIN operations. 
 
-  Querrty patters determine indexing ( next)
-
-## Next step 
-  Add indexing for query optimization
-
-  MOve to scalable data tools ( cloud / distributed systems)
+  Indexing
+  
+  CSV rexport workflow 
+  
+  Business-oriented visualization using Pansas and Matplotlib
