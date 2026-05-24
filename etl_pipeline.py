@@ -92,5 +92,7 @@ def plot():
     plt.show()
 
 if __name__=="__main__":
-    
+    df = extract()
+    df = transform(df)
+    load(df)        
     plot()
